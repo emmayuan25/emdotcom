@@ -1,11 +1,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 
 :root {
-    --main-purple: #5D16A6;
-    --main-purple-light: #9683EC;
-    --main-yellow: #F7B801;
-    --main-orange: #F18701;
-    --main-red: #F35B04;
+    --blue: #9BABB8;
+    --beige: #EEE3CB;
+    --brick: #D7C0AE;
+    --brown: #967E76;
 }
 
 html, body {
@@ -14,17 +13,16 @@ html, body {
 }
 
 .page {
-    background-color: var(--main-purple);
-    color: #fff;
+    background-color: var(--beige);
     width: 100vw;
     height: 100vh;
     font-family: "Poppins", sans-serif;
+    padding-left: 10%;
 }
 
 .navbar {
-    width: 100vw;
-    height: 40vh;
-    background-color: var(--main-purple-light);
+    width: 100%;
+    height: 35vh;
 }
 
 .container-fluid {
@@ -44,12 +42,13 @@ html, body {
 
 .navbar .navbar-collapse .navbar-nav {
     align-items: center;
-    background-color: var(--main-purple-light);
     width: 100%;
 }
 
 body > div > div > div > img {
     width: 15em;
+    border: solid 5px;
+    box-shadow: rgb(0, 0, 0) 0px 0px 0px 2px inset, var(--beige) 10px -10px 0px -3px, rgb(0, 0, 0) 10px -10px;
 }
 
 .intro-container {
@@ -61,6 +60,14 @@ body > div > div > div > img {
 }
 
 @media screen and (max-width: 768px) {
+    .page {
+        padding-left: 0%;
+    }
+
+    .navbar {
+        height: 25vh;
+    }
+
     .navbar .navbar-brand {
         padding-left: 1em;
     }
@@ -76,24 +83,24 @@ body > div > div > div > img {
 }
 
 .main-content {
-    background-color: var(--main-purple);
+    background-color: var(--beige);
     padding-bottom: 3em;
 }
 
 .main-intro {
-    color: #fff;
+    color: #000;
     font-size: 1.2em;
     padding-left: 2em;
     max-width: 50em;
 }
 
 .hi {
-    /* color: var(--main-orange); */
-    font-size: 2em;
+    font-size: 3em;
+    font-weight: 600;
 }
 
 .underline {
-    color: var(--main-yellow);
+    font-weight: 600;
 }
 
 i {
@@ -101,13 +108,13 @@ i {
 }
 
 .social-icons {
-    padding-top: 0.8em;
+    padding-top: 3em;
 }
 
 .social-icons a {
     text-decoration: none;
-    color: #fff;
-    margin-right: 0.5em;
+    color: #000;
+    margin-right: 0.8em;
 }
 
 .social-icons i {
@@ -115,5 +122,77 @@ i {
 }
 
 .social-icons a:hover {
-    color: var(--main-yellow);
+    text-decoration: underline;
+    color: #000;
+}
+
+/* Project */
+.proj-page {
+    background-color: var(--beige);
+    font-family: "Poppins", sans-serif;
+    padding-left: 10%;
+    width: 100vw;
+    min-height: 100vh;
+}
+.project-content {
+    padding-left: 6em;
+    background-color: var(--beige);
+}
+
+.project-row {
+    display: flex;
+    flex-direction: row;
+}
+
+.project-card {
+    border: solid 5px;
+    box-shadow: rgb(0, 0, 0) 0px 0px 0px 2px inset, var(--beige) 10px -10px 0px -3px, rgb(0, 0, 0) 10px -10px;
+    padding: 1em;
+    width: 30em;
+    margin-bottom: 3em;
+    margin-right: 5em;
+}
+
+.project-sep {
+    font-size: 5em;
+    font-weight: 600;
+}
+
+.project-title {
+    font-size: 3em;
+    font-weight: 600;
+    line-height: 1.2em;
+}
+
+.project-subtitle {
+    font-size: 1em;
+    font-weight: 600;
+    line-height: 1.2em;
+}
+
+.project-description {
+    margin-bottom: 0em;
+}
+
+.project-description a {
+    color: #000;
+    margin-right: 1em;
+}
+
+.project-description a:hover {
+    color: var(--blue);
+}
+
+@media screen and (max-width: 768px) {
+    .project-content {
+        padding-left: 1em;
+    }
+
+    .project-row {
+        flex-direction: column;
+    }
+
+    .project-card {
+        width: 80vw;
+    }
 }
